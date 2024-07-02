@@ -1,1 +1,54 @@
 \section{Second Part (Non-Rigid structure from motion by factorization and assuming a low-rank trajectory model)}
+\noindent In this section, we calculate the reconstruction with the low-rank trajectory method. This method is a little simpler because we already know in advance the matrix of base trajectories since we defined them with the value of k, we will show the structure in Equation 3.
+\begin{equation*}
+	\theta=
+	\begin{pmatrix}
+		\theta_{1}^{1} &  \cdots & \theta_{k}^{1}\\		
+		\vdots &  \ddots & \vdots \\
+		\theta_{1}^{f} &  \cdots & \theta_{k}^{f}\\		
+	\end{pmatrix}_{f\times k}
+\end{equation*}
+\begin{equation*}
+	[a^{x}]=
+	\begin{pmatrix}
+		a_{11}^{x} &  \cdots & a_{1p}^{x}\\		
+		\vdots &  \ddots & \vdots \\
+		a_{k1}^{x} &  \cdots & a_{kp}^{x}\\		
+	\end{pmatrix}_{k\times p}\text{ , }
+	[a^{y}]=
+	\begin{pmatrix}
+		a_{11}^{y} &  \cdots & a_{1p}^{y}\\		
+		\vdots &  \ddots & \vdots \\
+		a_{k1}^{y} &  \cdots & a_{kp}^{y}\\		
+	\end{pmatrix}_{k\times p}\text{ and }
+	[a^{z}]=
+	\begin{pmatrix}
+		a_{11}^{z} &  \cdots & a_{1p}^{z}\\		
+		\vdots &  \ddots & \vdots \\
+		a_{k1}^{z} &  \cdots & a_{kp}^{z}\\		
+	\end{pmatrix}_{k\times p}
+\end{equation*}
+
+\begin{equation}
+	X=
+	\begin{pmatrix}
+		x_{1}^{1} & x_{2}^{1} & \cdots & x_{p}^{1}\\
+		y_{1}^{1} & y_{2}^{1} & \cdots & y_{p}^{1}\\
+		z_{1}^{1} & z_{2}^{1} & \cdots & z_{p}^{1}\\
+		\vdots & \vdots & \ddots & \vdots \\
+		x_{1}^{f} & x_{2}^{f} & \cdots & x_{p}^{f}\\
+		y_{1}^{f} & y_{2}^{f} & \cdots & y_{p}^{f}\\
+		z_{1}^{f} & z_{2}^{f} & \cdots & z_{p}^{f}\\
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\theta_{f\times k} & 0_{f\times k} & \cdots & 0_{f\times k} \\		
+		0_{f\times k} &  \theta_{f\times k} & \vdots & 0_{f\times k}\\
+		\vdots &  \vdots &\ddots & \vdots \\
+		0_{f\times k} & 0_{f\times k} &  \cdots & \theta_{f\times k}		
+	\end{pmatrix}
+	\begin{pmatrix}
+		[a^{x}]_{k\times p} \\		
+		[a^{y}]_{k\times p} \\
+		[a^{z}]_{k\times p}				
+	\end{pmatrix}	
+\end{equation} 
