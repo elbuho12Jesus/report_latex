@@ -97,13 +97,21 @@ J(2*j-1+computed_points:2*j+computed_points,3*K*j-3*K+1+(6+K)*n_frames:3*K*j+(6+
 \end{lstlisting}
 \noindent and for that, in the code is added a matrix of ones from $2\times 3k$.\\
 
-\noindent Now we calculate the Jacobian part of the priors, so the dimension of the Jacobian for the priors comes from the following expression
+\noindent Now we calculate the Jacobian part of the priors.\\
 \begin{equation}\label{eq:priors}
 \underset{R^{i},B_{k},l_{i}^{k},t^{i}}{\arg\min}
 \gamma\sum_{i=1}^{i-1}\Vert L^{i}-L^{i+1} \Vert^{2}+
 \phi\sum_{i=1}^{i-1}\Vert R^{i}-R^{i+1} \Vert^{2}
 \end{equation}
-\noindent so from this equation \ref{eq:priors} and the orange color of the equation \ref{eq:optimization} we deduce that the Jacobian dimension for the prior L would be 
+\noindent from the equation we have
+\begin{itemize}
+\item \textbf{The prior with respect to the rotation $R^{i}$:} This means that the rotation between two consecutive frames $\sum_{i=1}^{i-1}\Vert L^{i}-L^{i+1} \Vert^{2}$ do not have abrupt changes, it is a smoothing of the rotations.
+\item \textbf{The prior with respect to the constants $L^{i}$:} This means that the costates that multiply the bases, such that $X^{i}=\sum_{j=1}^{k}l^{i}_{j}B_{j}$ form the shape matrix. Therefore, if the constans for two consecutive frames $\sum_{i=1}^{i-1}\Vert L^{i}-L^{i+1} \Vert^{2}$ does not have abrupt changes then the shapes do not have abrupt changes, it is a smoothing of the shapes.
+\end{itemize}
+
+\noindent Well, we use the expressions in equation \ref{eq:priors} to calculate the dimension of the Jacobian for the priors.\\
+
+\noindent So from this equation \ref{eq:priors} and the orange color of the equation \ref{eq:optimization} we deduce that the Jacobian dimension for the prior L would be 
 \begin{equation}
 Dim(J_{rows})=f-1
 Dim(J_{columns})=kf
