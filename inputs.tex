@@ -1,5 +1,16 @@
 \section{Inputs:}
-The input is a Matrix that one explain below:
+Given an image in the frame $k$, calling $p$ as the number of track point and $f$ as the number of frames, then the image is described by a $2\times p$ matrix $I_k$, defined
+
+\begin{equation}
+I_{k}=
+\begin{pmatrix}
+x_{1} & x_{2} & \cdots & x_{p}\\
+y_{1} & y_{2} & \cdots & y_{p}
+\end{pmatrix}
+\end{equation}
+where $(x_k,y_k)$ are the coordinated of the bidimensional space.
+As a consequence, the input matrix is expressed
+
 \begin{equation}
 Input=
 \begin{pmatrix}
@@ -7,13 +18,5 @@ I_{1}\\
 I_{2}\\
 \vdots\\
 I_{f}\\
-\end{pmatrix}
-\end{equation}
-Where $I_{k}$ is a Matrix $2\times p$, that represent a image in the frame $k$, such as $p=number of track points$ and $f=number of frames$
-\begin{equation}
-I_{k}=
-\begin{pmatrix}
-x_{1} & x_{2} & \cdots & x_{p}\\
-y_{1} & y_{2} & \cdots & y_{p}
 \end{pmatrix}
 \end{equation}

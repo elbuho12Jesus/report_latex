@@ -1,26 +1,26 @@
 \section{Second Part (Non-Rigid structure from motion by non-linear optimization and assuming a low-rank shape model)}
-\noindent In this task we must perform a nonlinear optimization for a non-rigid body, assuming a low rank. This code used Levenberg-Marquardt algorithm to optimize the non-linear equation that it is shown to next:
+\noindent In this task we should perform a nonlinear optimization for a non-rigid body, assuming a low rank. This code uses Levenberg-Marquardt algorithm to optimize the non-linear equation that it is shown to next:
 \begin{equation}\label{eq:optimization}
-\underset{R^{i},B_{k},l_{i}^{k},t^{i}}{\arg\min}
-\sum_{i=1}^{i}\Vert \widehat{W}^{i}-R^{i}\sum_{k=1}^{k}l_{i}^{k}B_{k}-t^{i}\Vert^{2}+
-\gamma\sum_{i=1}^{i-1}\Vert L^{i}-L^{i+1} \Vert^{2}+
-\phi\sum_{i=1}^{i-1}\Vert R^{i}-R^{i+1} \Vert^{2}
+	\underset{R^{i},B_{k},l_{i}^{k},t^{i}}{\arg\min}
+	\sum_{i=1}^{i}\Vert \widehat{W}^{i}-R^{i}\sum_{k=1}^{k}l_{i}^{k}B_{k}-t^{i}\Vert^{2}+
+	\gamma\sum_{i=1}^{i-1}\Vert L^{i}-L^{i+1} \Vert^{2}+
+	\phi\sum_{i=1}^{i-1}\Vert R^{i}-R^{i+1} \Vert^{2}
 \end{equation}
 \noindent Where:
 $B_{k}$ is a row of bases matrix.
-$R^{i}$ is a rotacon for a point in column $i$ of $X$ the 3D shape vector.
+$R^{i}$ is a rotation for a point in matrix column $i$ of $X$, which is the 3D shape vector. 
 $l_{i}$ are the constants such that $\sum_{k=1}^{k}l_{i}^{k}B_{k}=X$.
 $t^{i}$ is the translation.
 $L^{i}$ is the vector of all constants in frame $i$.
-\noindent The norm is that of Frobenius.\\
+\noindent The norm used is the Frobenius norm.\\
 
-\noindent In order to calculate the Levenberg-Marquardt optimization we need to calculate the Jacobian form of the equation \ref{eq:optimization}, we do this as shown in the following slide Figure \ref{fig:slideT2}
+\noindent In order to calculate the Levenberg-Marquardt optimization, we need to calculate the Jacobian form of the equation \ref{eq:optimization}. We do this as shown in the following slide Figure \ref{fig:slideT2}
 
 \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.4\textwidth]{T2/slide}
-    \caption{Jacobian form}
-    \label{fig:slideT2}
+	\centering
+	\includegraphics[width=0.7\textwidth]{T2/slide}
+	\caption{Jacobian form}
+	\label{fig:slideT2}
 \end{figure}
 
 \subsection{Code:}
@@ -37,18 +37,18 @@ $L^{i}$ is the vector of all constants in frame $i$.
 	\textcolor{red}{$4f$}$+$
 	\textcolor{blue}{$2f$}$+$
 	\textcolor{orange}{$kf$}$+$
-	\textcolor{lime}{$3kp$}	
+	\textcolor{Yellow}{$3kp$}	
 \end{itemize}
-	
+
 \noindent Where $f$ is the number of frames, $p$ is the total number of points tracked and $k$ is the total number of bases.\\
 
 \noindent \textbf{Explaining row sizes:}\\
-
-\noindent \textbf{\textcolor{green}{Green}:} Represents the visible points per frame and when we multiply it by two this is because the rotations are in quaternions and the quaternions are 2x4 and then they are two vectors per each points and that is why it is multiplied by two.\\
+\noindent \textbf{\textcolor{green}{Green}:} Represents the visible points per frame. When we multiply the sum of the visible points by two it is because the rotations are in quaternions. The quaternions are 2x4 and then they are two vectors per each point and that is why it is multiplied by two.\\ 
 
 \noindent \textbf{Explaining column sizes:}\\
 
-\noindent \textbf{\textcolor{red}{Red}:} Represents the value of the columns of the rotation matrix ($2\times 4$ quaternions) and we have a rotation matrix $R^{i}$ for each frame $i$, therefore $4f$ where $f$ is the number of frames.\\
+\noindent \textbf{\textcolor{red}{Red}:} Represents the value of the columns of the rotation matrix, which is $2\times 4$ quaternions. We have a rotation matrix $R^{i}$ for each frame $i$. Therefore, the dimension is $4f$, where $f$ is the number of frames.\\ 
+%aquimequedeNatalia%
 
 \noindent \textbf{\textcolor{blue}{Blue}:} Represents the translation matrix $t^{i}$, whose dimension is $1\times 2$, for each frame $i$, therefore $2f$ where $f$ is the number of frames.\\
 
@@ -58,7 +58,7 @@ $L^{i}$ is the vector of all constants in frame $i$.
 
 \noindent Well then we need to define the shape of our Jacobian matrix by putting $1$ where there are values and leaving $0$ in the spaces that do not exist, as shown in the following code.\\
 
-\begin{lstlisting}[style=Matlab-editor]
+\begin{lstlisting}[style=Matlab-editor, numbers=left]
 for i=1:n_frames
         for j=1:nnz(vij(i,:))        
             J(2*j-1+computed_points:2*j+computed_points,6*j-5:6*j)=ones(2,6);
