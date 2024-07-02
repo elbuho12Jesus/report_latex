@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.12)  2 JUL 2024 23:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.12)  3 JUL 2024 01:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -388,29 +388,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--4
 [1
 
 {C:/Users/Jesus/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<images/T1/slide.jpg, id=59, 598.48593pt x 422.32782pt>
+<images/T1/slide.jpg, id=63, 598.48593pt x 422.32782pt>
 File: images/T1/slide.jpg Graphic file (type jpg)
 <use images/T1/slide.jpg>
 Package pdftex.def Info: images/T1/slide.jpg  used on input line 7.
 (pdftex.def)             Requested size: 258.75pt x 182.58983pt.
  [2 <./images/T1/slide.jpg>]
-<images/T1/code.jpg, id=73, 512.41437pt x 515.42563pt>
+<images/T1/code.jpg, id=77, 512.41437pt x 515.42563pt>
 File: images/T1/code.jpg Graphic file (type jpg)
 <use images/T1/code.jpg>
 Package pdftex.def Info: images/T1/code.jpg  used on input line 47.
 (pdftex.def)             Requested size: 241.49895pt x 242.91858pt.
  [3 <./images/T1/code.jpg>]
-<images/T1/figure1.jpg, id=80, 843.15pt x 632.3625pt>
+<images/T1/figure1.jpg, id=84, 843.15pt x 632.3625pt>
 File: images/T1/figure1.jpg Graphic file (type jpg)
 <use images/T1/figure1.jpg>
 Package pdftex.def Info: images/T1/figure1.jpg  used on input line 62.
 (pdftex.def)             Requested size: 207.0021pt x 155.24376pt.
-<images/T1/figure3.jpg, id=81, 843.15pt x 632.3625pt>
+<images/T1/figure3.jpg, id=85, 843.15pt x 632.3625pt>
 File: images/T1/figure3.jpg Graphic file (type jpg)
 <use images/T1/figure3.jpg>
 Package pdftex.def Info: images/T1/figure3.jpg  used on input line 69.
 (pdftex.def)             Requested size: 258.75pt x 194.06194pt.
-<images/T1/figure2.jpg, id=82, 843.15pt x 632.3625pt>
+<images/T1/figure2.jpg, id=86, 843.15pt x 632.3625pt>
 File: images/T1/figure2.jpg Graphic file (type jpg)
 <use images/T1/figure2.jpg>
 Package pdftex.def Info: images/T1/figure2.jpg  used on input line 76.
@@ -419,7 +419,7 @@ Package pdftex.def Info: images/T1/figure2.jpg  used on input line 76.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/T1/3derror.jpg, id=85, 152.57pt x 42.1575pt>
+<images/T1/3derror.jpg, id=89, 152.57pt x 42.1575pt>
 File: images/T1/3derror.jpg Graphic file (type jpg)
 <use images/T1/3derror.jpg>
 Package pdftex.def Info: images/T1/3derror.jpg  used on input line 84.
@@ -432,7 +432,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--16
 
  []
 
-<images/T2/slide.jpg, id=97, 596.2275pt x 422.32782pt>
+<images/T2/slide.jpg, id=101, 596.2275pt x 422.32782pt>
 File: images/T2/slide.jpg Graphic file (type jpg)
 <use images/T2/slide.jpg>
 Package pdftex.def Info: images/T2/slide.jpg  used on input line 21.
@@ -532,7 +532,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--126
  []
 
 [8]
-<images/T2/J.jpg, id=148, 3854.4pt x 1986.42125pt>
+<images/T2/J.jpg, id=152, 3854.4pt x 1986.42125pt>
 File: images/T2/J.jpg Graphic file (type jpg)
 <use images/T2/J.jpg>
 Package pdftex.def Info: images/T2/J.jpg  used on input line 158.
@@ -542,17 +542,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--173
 
  []
 
-<images/T2/coodinates2D.jpg, id=167, 843.15pt x 632.3625pt>
+<images/T2/coodinates2D.jpg, id=171, 843.15pt x 632.3625pt>
 File: images/T2/coodinates2D.jpg Graphic file (type jpg)
 <use images/T2/coodinates2D.jpg>
 Package pdftex.def Info: images/T2/coodinates2D.jpg  used on input line 176.
 (pdftex.def)             Requested size: 345.0pt x 258.74925pt.
-<images/T2/coordinates3D.jpg, id=169, 1264.725pt x 1193.45876pt>
+<images/T2/coordinates3D.jpg, id=173, 1264.725pt x 1193.45876pt>
 File: images/T2/coordinates3D.jpg Graphic file (type jpg)
 <use images/T2/coordinates3D.jpg>
 Package pdftex.def Info: images/T2/coordinates3D.jpg  used on input line 184.
 (pdftex.def)             Requested size: 345.0pt x 325.55252pt.
-<images/T2/steps.jpg, id=171, 542.025pt x 815.045pt>
+<images/T2/steps.jpg, id=175, 542.025pt x 815.045pt>
 File: images/T2/steps.jpg Graphic file (type jpg)
 <use images/T2/steps.jpg>
 Package pdftex.def Info: images/T2/steps.jpg  used on input line 191.
@@ -570,45 +570,85 @@ Overfull \hbox (61.46785pt too wide) detected at line 30
 10 a[]\OT1/cmr/m/n/10 ] = [][] [][\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 ] = [][]
  []
 
-[11 <./images/T2/coordinates3D.jpg>]) [12] [13 <./images/T2/steps.jpg>]
-(Lab5AV.aux)
+[11 <./images/T2/coordinates3D.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+<images/T3/slide.jpg, id=190, 799.98875pt x 619.31375pt>
+File: images/T3/slide.jpg Graphic file (type jpg)
+<use images/T3/slide.jpg>
+Package pdftex.def Info: images/T3/slide.jpg  used on input line 60.
+(pdftex.def)             Requested size: 241.49895pt x 186.94846pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+71.
+(C:\Users\Jesus\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
+File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 109--113
+
+ []
+
+) [13] [14 <./images/T2/steps.jpg>] [15 <./images/T3/slide.jpg>] (Lab5AV.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-Package rerunfilecheck Info: File `Lab5AV.out' has not changed.
-(rerunfilecheck)             Checksum: 9150DF5CC851A64D9D993D766CF959FC;2118.
+
+
+Package rerunfilecheck Warning: File `Lab5AV.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Lab5AV.out':
+(rerunfilecheck)             Before: 432C97F66E708D9DBC007B9F2BEF7335;2201
+(rerunfilecheck)             After:  02F9E5E67CF9BF500B77CDF5D810CAD5;2304.
  ) 
 Here is how much of TeX's memory you used:
- 11802 strings out of 474486
- 181928 string characters out of 5743755
- 2012542 words of memory out of 5000000
- 33875 multiletter control sequences out of 15000+600000
- 564562 words of font info for 59 fonts, out of 8000000 for 9000
+ 11905 strings out of 474486
+ 183642 string characters out of 5743755
+ 2014542 words of memory out of 5000000
+ 33939 multiletter control sequences out of 15000+600000
+ 564859 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,674b,2077s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Jesus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1000.pk><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Jesus/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Jesus/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Jesus/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/J
-esus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
-/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12
-.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmr17.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmr5.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jesus/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Jesus/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Lab5AV.pdf (13 pages, 1473614 bytes).
+ 75i,16n,79p,674b,2077s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Jesus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt
+1000.pk> <C:\Users\Jesus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\tcrm1000.pk><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Jesus/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Jesus/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Jesus/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Jes
+us/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/U
+sers/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.p
+fb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr12.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr17.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr5.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Jesus/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jesus/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Jesus/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Lab5AV.pdf (15 pages, 1797776 bytes).
 PDF statistics:
- 282 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 342 PDF objects out of 1000 (max. 8388607)
+ 112 named destinations out of 1000 (max. 500000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
