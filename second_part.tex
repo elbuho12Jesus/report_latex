@@ -161,7 +161,7 @@ Joining the Jacobian and the Jacobian of the priors we have the following graph 
 \item $coeff_prior$(it mean that the $L$ prior is active): $1$
 \item number of optimizer iterations: $50$
 \end{itemize}
-
+\noindent In Figure \ref{fig:coodinates2D} we can see the comparison of the input points of a frame in green against the estimated points of that frame in blue.\\
 
 \begin{figure}[h]
     \centering
@@ -170,13 +170,14 @@ Joining the Jacobian and the Jacobian of the priors we have the following graph 
     \label{fig:coodinates2D}
 \end{figure}
 
+\noindent In Figure \ref{fig:coordinates3D} we can see the estimated 3D points for a frame.\\
 \begin{figure}[h]
     \centering
     \includegraphics[width=1.0\textwidth]{T2/coordinates3D}
     \caption{3D reconstruction}
     \label{fig:coordinates3D}
 \end{figure}
-
+\noindent In Figure \ref{fig:steps} we see the calculation of each of the 50 optimizations, this method has a high cost in performance, but a good result is achieved as shown by the low error at the end.\\
 \begin{figure}[h]
     \centering
     \includegraphics[width=1.0\textwidth]{T2/steps}
