@@ -1,0 +1,185 @@
+\section{Second Part (Non-Rigid structure from motion by non-linear optimization and assuming a low-rank shape model)}
+\noindent In this task we must perform a nonlinear optimization for a non-rigid body, assuming a low rank. This code used Levenberg-Marquardt algorithm to optimize the non-linear equation that it is shown to next:
+\begin{equation}\label{eq:optimization}
+\underset{R^{i},B_{k},l_{i}^{k},t^{i}}{\arg\min}
+\sum_{i=1}^{i}\Vert \widehat{W}^{i}-R^{i}\sum_{k=1}^{k}l_{i}^{k}B_{k}-t^{i}\Vert^{2}+
+\gamma\sum_{i=1}^{i-1}\Vert L^{i}-L^{i+1} \Vert^{2}+
+\phi\sum_{i=1}^{i-1}\Vert R^{i}-R^{i+1} \Vert^{2}
+\end{equation}
+\noindent Where:
+$B_{k}$ is a row of bases matrix.
+$R^{i}$ is a rotacon for a point in column $i$ of $X$ the 3D shape vector.
+$l_{i}$ are the constants such that $\sum_{k=1}^{k}l_{i}^{k}B_{k}=X$.
+$t^{i}$ is the translation.
+$L^{i}$ is the vector of all constants in frame $i$.
+\noindent The norm is that of Frobenius.\\
+
+\noindent In order to calculate the Levenberg-Marquardt optimization we need to calculate the Jacobian form of the equation \ref{eq:optimization}, we do this as shown in the following slide Figure \ref{fig:slideT2}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{T2/slide}
+    \caption{Jacobian form}
+    \label{fig:slideT2}
+\end{figure}
+
+\subsection{Code:}
+\noindent Now we will show how this Jacobian form is calculated in the code.\\
+
+\noindent So first we will define the dimensions of Jacobian matrix. For this code we are using quaternions for the rotations, therefore $R^{i}$ is $2\times 4$.\\
+
+\noindent Then the dimension of Jacobian matrix is defined in the following way
+
+\begin{itemize}
+	\item number of rows of $Dim(J^{rows})=$
+	\textcolor{green}{$2\sum_{i=1}^{f}(number of points visible in frame i)$}
+	\item number of columns of $Dim(J_{columns})=$
+	\textcolor{red}{$4f$}$+$
+	\textcolor{blue}{$2f$}$+$
+	\textcolor{orange}{$kf$}$+$
+	\textcolor{lime}{$3kp$}	
+\end{itemize}
+	
+\noindent Where $f$ is the number of frames, $p$ is the total number of points tracked and $k$ is the total number of bases.\\
+
+\noindent \textbf{Explaining row sizes:}\\
+
+\noindent \textbf{\textcolor{green}{Green}:} Represents the visible points per frame and when we multiply it by two this is because the rotations are in quaternions and the quaternions are 2x4 and then they are two vectors per each points and that is why it is multiplied by two.\\
+
+\noindent \textbf{Explaining column sizes:}\\
+
+\noindent \textbf{\textcolor{red}{Red}:} Represents the value of the columns of the rotation matrix ($2\times 4$ quaternions) and we have a rotation matrix $R^{i}$ for each frame $i$, therefore $4f$ where $f$ is the number of frames.\\
+
+\noindent \textbf{\textcolor{blue}{Blue}:} Represents the translation matrix $t^{i}$, whose dimension is $1\times 2$, for each frame $i$, therefore $2f$ where $f$ is the number of frames.\\
+
+\noindent \textbf{\textcolor{orange}{Orange}:} Represents the matrix $L_{i}$ whose dimension is $1\times k$ for each frame $i$, therefore $kf$ where $f$ is the number of frames.\\
+
+\noindent \textbf{\textcolor{lime}{Yellow}:} Represents the matrix $B_{b}$ whose dimension is $3\times p$ for each base $b$, therefore $3pk$ where $k$ is the number of bases.\\
+
+\noindent Well then we need to define the shape of our Jacobian matrix by putting $1$ where there are values and leaving $0$ in the spaces that do not exist, as shown in the following code.\\
+
+\begin{lstlisting}[style=Matlab-editor]
+for i=1:n_frames
+        for j=1:nnz(vij(i,:))        
+            J(2*j-1+computed_points:2*j+computed_points,6*j-5:6*j)=ones(2,6);
+            J(2*j-1+computed_points:2*j+computed_points,K*j-K+1+6*n_frames:K*j+6*n_frames)=ones(2,K);
+            J(2*j-1+computed_points:2*j+computed_points,3*K*j-3*K+1+(6+K)*n_frames:3*K*j+(6+K)*n_frames)=ones(2,3*K);
+        end
+        computed_points=computed_points+2*nnz(vij(i,:));
+    end
+\end{lstlisting}
+\noindent In the first for loop each frame is iterated, in the second for loop only the points visible in that frame are iterated.\\
+\begin{lstlisting}[style=Matlab-editor]
+J(2*j-1+computed_points:2*j+computed_points,6*j-5:6*j)=ones(2,6);
+\end{lstlisting}
+\noindent Here, the Jacobian is calculated for the rotation $R$ part (in quaternions) and the translation part $t$, having this
+\begin{equation}
+\begin{pmatrix}
+R_{2\times 4} & | & t_{2\times 2}
+\end{pmatrix}_{2\times 6}
+\end{equation}
+we can add a matrix of ones of $2\times 6$
+
+\noindent Now, the Jacobian is calculated for the constants $L^{i}$ part, where $L^{i}=[l_{1}^{i},l_{2}^{i}, \cdots, l_{k}^{i}]$ such that $i$ is a frame.
+\begin{lstlisting}[style=Matlab-editor]
+J(2*j-1+computed_points:2*j+computed_points,K*j-K+1+6*n_frames:K*j+6*n_frames)=ones(2,K);
+\end{lstlisting}
+and for that, in the code is added a matrix of ones from $2\times k$.\\
+
+\noindent Now, the Jacobian is calculated for the bases $B_{i}$ part, where
+\begin{equation}
+B_{i}=\begin{pmatrix}
+[b_{1}^{i}]_{3\times 1} & [b_{2}^{i}]_{3\times 1} & \cdots & [b_{k}^{i}]_{3\times 1}
+\end{pmatrix}_{3\times k}
+\end{equation}
+\begin{lstlisting}[style=Matlab-editor]
+J(2*j-1+computed_points:2*j+computed_points,3*K*j-3*K+1+(6+K)*n_frames:3*K*j+(6+K)*n_frames)=ones(2,3*K);
+\end{lstlisting}
+\noindent and for that, in the code is added a matrix of ones from $2\times 3k$.\\
+
+\noindent Now we calculate the Jacobian part of the priors, so the dimension of the Jacobian for the priors comes from the following expression
+\begin{equation}\label{eq:priors}
+\underset{R^{i},B_{k},l_{i}^{k},t^{i}}{\arg\min}
+\gamma\sum_{i=1}^{i-1}\Vert L^{i}-L^{i+1} \Vert^{2}+
+\phi\sum_{i=1}^{i-1}\Vert R^{i}-R^{i+1} \Vert^{2}
+\end{equation}
+\noindent so from this equation \ref{eq:priors} and the orange color of the equation \ref{eq:optimization} we deduce that the Jacobian dimension for the prior L would be 
+\begin{equation}
+Dim(J_{rows})=f-1
+Dim(J_{columns})=kf
+\end{equation}
+\noindent and the blue and red color of the equation \ref{eq:optimization} also we can deduce the Jacobian dimension for the prior R as
+\begin{equation}
+Dim(J_{rows})=f-1
+Dim(J_{columns})=6f
+\end{equation}
+
+\noindent Now we will show how we fill the indices that have a value in the Jacobian Matrix of the $L$ prior with 1 and otherwise hold with zero.\\
+\begin{lstlisting}[style=Matlab-editor]
+if (priors.coeff_prior == 1)
+     % prior terms on L
+     L=spalloc(n_frames-1,(K+6)*n_frames + K*3*n_points,2*K*(n_frames-1));     
+     for i=1:n_frames-1
+        L(i,K*i-K+1+6*n_frames:K*i+K+6*n_frames)=ones(1,2*K);        
+     end
+     if K==1
+         J(2*nnz(vij)+1:size(J,1), :)=L;
+     else
+         J(2*nnz(vij)+1:2*nnz(vij)+n_frames-1, :)=L;
+     end
+ end 
+\end{lstlisting}
+\noindent We do the following, we take the $L_{i}$ and $L_{i+1}$ and join them as shown in the equation \ref{eq:Li_li1}
+\begin{equation}\label{eq:Li_li1}
+\begin{pmatrix}
+[L_{i}]_{1\times k} & | & [L_{i+1}]_{1\times k}
+\end{pmatrix}_{1\times 2k}
+\end{equation}
+\noindent and because of this in the code we add a matrix of ones $1\times 2K$.\\
+\noindent For the Jacobian Matrix of the $R$ prior is the similar way, in this case we joint $R^{i}$ and $R^{i+1}$ like show in the equation \ref{eq:Ri_Ri1}
+\begin{equation}\label{eq:Ri_Ri1}
+\begin{pmatrix}
+[R^{i}]_{1\times 6} & | & [R_{i+1}]_{1\times 6}
+\end{pmatrix}_{1\times 12}
+\end{equation}
+\noindent and because of this in the code we add a matrix of ones $1\times 12$.\\
+Joining the Jacobian and the Jacobian of the priors we have the following graph figure \ref{fig:J}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.0\textwidth]{T2/J}
+    \caption{Jacobian result}
+    \label{fig:J}
+\end{figure}
+
+\subsection{Examples:}
+\noindent Here we will show how to reconstruct the human face with the given frames and using the following input parameters:
+
+\begin{itemize}
+\item low-rank $K$(it is the number of bases): $2$
+\item $camera_prior$(it mean that the $R$ prior is active): $1$
+\item $coeff_prior$(it mean that the $L$ prior is active): $1$
+\item number of optimizer iterations: $50$
+\end{itemize}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.0\textwidth]{T2/coodinates2D}
+    \caption{Input points compared to optimized points}
+    \label{fig:coodinates2D}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.0\textwidth]{T2/coordinates3D}
+    \caption{3D reconstruction}
+    \label{fig:coordinates3D}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.0\textwidth]{T2/steps}
+    \caption{Optimizer iterations}
+    \label{fig:steps}
+\end{figure}
