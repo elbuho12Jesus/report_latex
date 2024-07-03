@@ -111,3 +111,27 @@ as we can see inside the function $metricUpgrade(LambdaHat,q0)$ on line 13\\.
 \noindent In the line 12, we calculate $D$ from $RC$, solving the equation $\Vert W-RCD\Vert =0$.\\
 \noindent In the line 13, finally we calculate the shape matrix $X=CD$.\\
 \subsection{Examples:}
+\noindent In this part, we show some results of the code for the low-rank trajectory model.\\ 
+
+\noindent We start with the file \textbf{$drink_mocap.mat$} that provides the key points whose represent a person is holding a bottle. The inputs for the code are\\
+
+\begin{itemize}
+\item loaded data: \textbf{$drink_mocap.mat$}
+\item Rank of the trajectory basis K: 11
+\end{itemize}
+
+\noindent In the Figure \ref{fig:drink}, we can see that as similar are the truth 3D points and the reconstructed 3D points in a fixed frame $i$ ($\Vert X_{\text{truth shape}}^{i}-X_{\text{reconstructed shape}}^{i}\Vert$).\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{T3/drink}
+	\caption{Comparison between real 3D points(green) and 3D points reconstructed(blue) for \textbf{$drink_mocap.mat$}.}
+	\label{fig:drink}
+\end{figure}
+\noindent In the Figure \ref{fig:drink_error}, the first error represents the difference between the truth rotation matrix and the reconstructed rotation matrix, the second error represents the difference between the truth shape matrix and the reconstructed shape matrix.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{T3/3DerrorDrink}
+	\caption{error between real points and reconstruction points for \textbf{$drink_mocap.mat$}. The first error is for the shape matrix, and the second is for rotation matrix.}
+	\label{fig:drink_error}
+\end{figure}
+\\noindent 
