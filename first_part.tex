@@ -10,7 +10,7 @@
 \end{figure}
 
 \subsection{Code:}
-\noindent Now, we introduce the code \ref{lstlisting-codeT1}. We will explain each line number:\\ 
+\noindent Now, we introduce the code \ref{lst:codeT1}. We will explain each line number:\\ 
 \noindent For the line $1$ and $2$, $Zc$ is defined as the difference between the input matrix and the average of all the points in each frame, and not as the input matrix.
 This way, we no longer have to consider translation in the computations.\\ 
 \noindent Therefore, the average matrix would be the following, with dimensions $2f\times p$
@@ -48,7 +48,7 @@ Zc=Input-Mean
 
 \noindent In the ``while loop" of the line $10$, we try to reduce $\Vert Zc-RU\Vert$  to the threshold, which in the code is called epsilon. The idea to optimize the rotation matrix is use the rotation condition $R_{i}R_{i}'=I$, where $I$ corresponds to the identity matrix. This rotation condition is used to calculate $T$ in the code and thus be able to calculate the new matrices $S$ and $R$.
 
-\begin{lstlisting}[style=Matlab-editor, numbers=left]
+\begin{lstlisting}[style=Matlab-editor, numbers=left,label={lst:codeT1},captionpos=b, caption={Factorization code for orthographic camera}]
 T = mean(Zc,2);
 Zc = Zc - repmat(T,1,size(Zc,2)); 
 [U, D, V] = svd(Zc);
@@ -72,7 +72,7 @@ while thenorm>epsilon && k<n_iter
     k=k+1;
     thenorm=norm(R-Rp,'fro')/numel(M);
 end
-\end{lstlisting}\label{lstlisting-codeT1}
+\end{lstlisting}
 \noindent Finally, ones that the optimization finish, we obtain a shape matrix $S$ to compare as the truth matix shape $X$.
 
 \subsection{Examples:}
