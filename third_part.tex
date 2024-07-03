@@ -1,5 +1,5 @@
-\section{Second Part (Non-Rigid structure from motion by factorization and assuming a low-rank trajectory model)}
-\noindent In this section, we calculate the reconstruction with the low-rank trajectory method. This method is a little simpler because we already know in advance the matrix of base trajectories since we defined them with the value of k, we will show the structure in Equation \ref{eq:shape_trajectory}.
+\section{Third Part (Non-Rigid structure from motion by factorization and assuming a low-rank trajectory model)} 
+\noindent In this section, we calculate the reconstruction with the low-rank trajectory method. This method is a little simpler because we already know in advance the matrix of base trajectories, since we defined them with the value of $k$. We will show the structure in Equation \ref{eq:shape_trajectory}.
 \begin{equation*}
 	\theta=
 	\begin{pmatrix}
@@ -62,10 +62,11 @@
 	\label{fig:slideT3}
 \end{figure}
 
-\noindent As shown in Figure \ref{fig:slideT3}, in this case, the range of the matrix $W$ (measurement matrix) is $3k$ since $RC$ is of dimension $2I\times 3k$ and $D$ is of dimension $3k\times p$. Therefore, we must calculate $Q$ by enforcing the orthogonality constraints for $RC$ ($RCxRC'=I_{2Ix2I}$) and since $C$ is already known, we can calculate $X$ in the form $X=CD$.\\
+\noindent As shown in Figure \ref{fig:slideT3}, in this case, the rank of the matrix $W$ (measurement matrix) is $3k$, since $RC$ has dimensions $2I\times 3k$ and $D$ has dimensions $3k\times p$. Therefore, we should calculate $Q$ by enforcing the orthogonality constraints for $RC$, defined $(RC)(RC)^{'}=I_{2I\times 2I}$, and since $C$ is already known, we can calculate $X$ in the form $X=CD$.\\ 
+
 \subsection{Code:}
 \noindent Now we will show how to update $Q$ to find the shape matrix $X$.
-\begin{lstlisting}[style=Matlab-editor, numbers=left]
+\begin{lstlisting}[style=Matlab-editor, numbers=left, caption={Factorization method}, captionpos=b, label={lst:factorization}]
 	[U,D,V]=svd(W,0);
 	RHat=U(:,1:3*K)*sqrt(D(1:3*K,1:3*K));
 	Xhat=sqrt(D(1:3*K,1:3*K))*V(:,1:3*K)';    
@@ -80,16 +81,17 @@
 	D = inv(G'*G)*G'*W;
 	X=C*D;
 \end{lstlisting}
-\noindent In the line 1, we compute the SVD by $W$ (measurement matrix)).\\
-\noindent In the line 2 and 3, since we know the rank of the matrix is $3k$, then we restrict the dimensions of the matrices $U$, $D$, and $V$ as follows:
+\noindent In line 1 in Listing \ref{lst:factorization}, we compute the SVD for $W$ (measurement matrix).\\ 
+\noindent In lines 2 and 3 in Listing \ref{lst:factorization}, since we know the rank of the matrix is $3k$, then we restrict the dimensions of the matrices $U$, $D$, and $V$ as follows:
 \begin{itemize}
 	\item For $U$, we take only its first $3k$ columns.
 	\item For $D$, we take only its first $3k$ rows and first 3 columns.
 	\item For $V$ we take only the last $3k$ columns
 \end{itemize}
 \noindent And with these new restrictions for $U$, $D$ and $V$, we calculate the initials matrix $RC=U\sqrt{D}$ and $D=\sqrt{D}V'$.\\
-\noindent In the line 6, We update Q by using the orthogonality conditions for the matrix $RHat*q$($RHat=$initial RC)
-\begin{lstlisting}[style=Matlab-editor, numbers=left]
+\noindent In line 6 in Listing \ref{lst:factorization}, we update Q by using the orthogonality conditions for the matrix $RHat$, initialized as $RHat=\text{initial } RC$. $Q$ is defined as follows.
+
+\begin{lstlisting}[style=Matlab-editor, numbers=left, caption={Update function}, captionpos=b, label={lst:updatefunct}]
 function [Q] = metricUpgrade(LambdaHat,q0)
 
 k = size(LambdaHat,2)/3;
@@ -106,32 +108,33 @@ options = optimset('Diagnostics','off','MaxFunEval',100000,'MaxIter',2000,'TolFu
 
 Q = reshape(q,3*k,3);
 \end{lstlisting}
-as we can see inside the function $metricUpgrade(LambdaHat,q0)$ on line 13\\.
-\noindent In the line 10, we compute the trajectory bases.\\
-\noindent In the line 12, we calculate $D$ from $RC$, solving the equation $\Vert W-RCD\Vert =0$.\\
-\noindent In the line 13, finally we calculate the shape matrix $X=CD$.\\
+
+\noindent We can see inside the function $metricUpgrade(LambdaHat,q0)$ on line 13 of Listing \ref{lst:updatefunct}, where we compute the minimum $Q$ satisfying the orthogonality condition.\\ 
+\noindent In line 10 in Listing \ref{lst:factorization}, we compute the trajectory bases.\\
+\noindent In line 12 in Listing \ref{lst:factorization}, we calculate $D$ from $RC$, solving the equation $\Vert W-RCD\Vert =0$.\\
+\noindent In line 13 in Listing \ref{lst:factorization}, finally we calculate the shape matrix $X=CD$.\\
 \subsection{Examples:}
 \noindent In this part, we show some results of the code for the low-rank trajectory model.\\ 
 
-\noindent We start with the file \textbf{$drink_mocap.mat$} that provides the key points whose represent a person is holding a bottle. The inputs for the code are\\
-
+\noindent We start with the file \textbf{drink\_mocap.mat} that provides the key points whose represent a person is holding a bottle. The inputs for the code are
 \begin{itemize}
-\item loaded data: \textbf{$drink_mocap.mat$}
-\item Rank of the trajectory basis K: 11
+\item Loaded data: \textbf{drink\_mocap.mat} 
+\item Rank of the trajectory basis $K$: 11 
 \end{itemize}
 
-\noindent In the Figure \ref{fig:drink}, we can see that as similar are the truth 3D points and the reconstructed 3D points in a fixed frame $i$ ($\Vert X_{\text{truth shape}}^{i}-X_{\text{reconstructed shape}}^{i}\Vert$).\\
-\begin{figure}[h]
+\noindent In the Figure \ref{fig:drink}, we can notice the accordance between the truth 3D points and the reconstructed 3D points in a fixed frame $i$ ($\Vert X_{\text{truth shape}}^{i}-X_{\text{reconstructed shape}}^{i}\Vert$).\\
+\begin{figure}[h]  
 	\centering
 	\includegraphics[width=0.7\textwidth]{T3/drink}
-	\caption{Comparison between real 3D points(green) and 3D points reconstructed(blue) for \textbf{$drink_mocap.mat$}.}
+	\caption{Comparison between real 3D points (green) and 3D points reconstructed (blue) for \textbf{$drink\_mocap.mat$}.}
 	\label{fig:drink}
 \end{figure}
-\noindent In the Figure \ref{fig:drink_error}, the first error represents the difference between the truth rotation matrix and the reconstructed rotation matrix, the second error represents the difference between the truth shape matrix and the reconstructed shape matrix.
+
+\noindent In the Figure \ref{fig:drink_error}, the first error of $0.0034452$ represents the difference between the truth rotation matrix and the reconstructed rotation matrix. The second error of $0.0052503$ represents the difference between the truth shape matrix and the reconstructed shape matrix. 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{T3/3DerrorDrink}
-	\caption{error between real points and reconstruction points for \textbf{$drink_mocap.mat$}. The first error is for the shape matrix, and the second is for rotation matrix.}
+	\caption{Error between real points and reconstruction points for \textbf{drink\_mocap.mat}. The first error is for the shape matrix, and the second is for the rotation matrix.}
 	\label{fig:drink_error}
 \end{figure}
-\\noindent 
+\noindent 
