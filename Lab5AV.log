@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.12)  3 JUL 2024 23:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.12)  3 JUL 2024 23:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -323,6 +323,9 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
 \jayDepth@mlpr=\skip55
 \sectionRuleOffset@mlpr=\skip56
 \toks@mlpr=\toks24
+) (C:\Users\Jesus\AppData\Local\Programs\MiKTeX\tex/latex/preprint\fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip57
 )
 (C:\Users\Jesus\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
@@ -332,24 +335,24 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (Lab5AV.aux)
 \openout1 = `Lab5AV.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 (C:\Users\Jesus\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -376,7 +379,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 15.
+Package hyperref Info: Link coloring OFF on input line 18.
  (Lab5AV.out) (Lab5AV.out)
 \@outlinefile=\write3
 \openout3 = `Lab5AV.out'.
@@ -390,17 +393,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--4
 [1
 
 {C:/Users/Jesus/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<images/T1/slide.jpg, id=67, 598.48593pt x 422.32782pt>
+<images/T1/slide.jpg, id=68, 598.48593pt x 422.32782pt>
 File: images/T1/slide.jpg Graphic file (type jpg)
 <use images/T1/slide.jpg>
 Package pdftex.def Info: images/T1/slide.jpg  used on input line 7.
-(pdftex.def)             Requested size: 258.75pt x 182.58983pt.
- [2 <./images/T1/slide.jpg>]
+(pdftex.def)             Requested size: 352.31625pt x 248.61705pt.
+
 Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
-
+[2 <./images/T1/slide.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
@@ -412,63 +415,62 @@ LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line
 (C:\Users\Jesus\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-[3]
-<images/T1/figure1.jpg, id=113, 843.15pt x 632.3625pt>
+<images/T1/figure1.jpg, id=84, 843.15pt x 632.3625pt>
 File: images/T1/figure1.jpg Graphic file (type jpg)
 <use images/T1/figure1.jpg>
 Package pdftex.def Info: images/T1/figure1.jpg  used on input line 88.
-(pdftex.def)             Requested size: 207.0021pt x 155.24376pt.
-<images/T1/figure3.jpg, id=114, 843.15pt x 632.3625pt>
+(pdftex.def)             Requested size: 281.85587pt x 211.39165pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/T1/figure3.jpg, id=85, 843.15pt x 632.3625pt>
 File: images/T1/figure3.jpg Graphic file (type jpg)
 <use images/T1/figure3.jpg>
 Package pdftex.def Info: images/T1/figure3.jpg  used on input line 95.
-(pdftex.def)             Requested size: 258.75pt x 194.06194pt.
+(pdftex.def)             Requested size: 352.31625pt x 264.23956pt.
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/T1/figure2.jpg, id=115, 843.15pt x 632.3625pt>
+<images/T1/figure2.jpg, id=86, 843.15pt x 632.3625pt>
 File: images/T1/figure2.jpg Graphic file (type jpg)
 <use images/T1/figure2.jpg>
 Package pdftex.def Info: images/T1/figure2.jpg  used on input line 102.
-(pdftex.def)             Requested size: 258.75pt x 194.06194pt.
+(pdftex.def)             Requested size: 352.31625pt x 264.23956pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/T1/3derror.jpg, id=118, 152.57pt x 42.1575pt>
+[3]
+<images/T1/3derror.jpg, id=120, 152.57pt x 42.1575pt>
 File: images/T1/3derror.jpg Graphic file (type jpg)
 <use images/T1/3derror.jpg>
-Package pdftex.def Info: images/T1/3derror.jpg  used on input line 110.
-(pdftex.def)             Requested size: 137.9979pt x 38.13243pt.
+Package pdftex.def Info: images/T1/3derror.jpg  used on input line 111.
+(pdftex.def)             Requested size: 187.89914pt x 51.92157pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (second_part.tex [4 <./images/T1/figure1.jpg>]
+) (second_part.tex [4 <./images/T1/figure1.jpg> <./images/T1/figure3.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 8--16
 
  []
 
-[5 <./images/T1/figure3.jpg> <./images/T1/figure2.jpg>]
-<images/T2/slide.jpg, id=135, 596.2275pt x 422.32782pt>
+<images/T2/slide.jpg, id=131, 596.2275pt x 422.32782pt>
 File: images/T2/slide.jpg Graphic file (type jpg)
 <use images/T2/slide.jpg>
 Package pdftex.def Info: images/T2/slide.jpg  used on input line 21.
-(pdftex.def)             Requested size: 241.49895pt x 171.06116pt.
+(pdftex.def)             Requested size: 328.82707pt x 232.91899pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
-
+[5 <./images/T1/figure2.jpg> <./images/T1/3derror.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
- []
-
-
-Overfull \hbox (6.28848pt too wide) in paragraph at lines 34--36
-[]\OT1/cmr/m/n/10 number of rows of $\OML/cmm/m/it/10 Dim\OT1/cmr/m/n/10 (\OML/
-cmm/m/it/10 J[]\OT1/cmr/m/n/10 ) =$ []$2 [][](\OML/cmm/m/it/10 numberofpointsvi
-sibleinframei\OT1/cmr/m/n/10 )$[] 
  []
 
 
@@ -476,7 +478,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
-[6 <./images/T1/3derror.jpg> <./images/T2/slide.jpg>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 45--47
 
  []
@@ -501,7 +503,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
-
+[6 <./images/T2/slide.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
@@ -514,13 +516,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
 Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
- []
-
-[7]
-Overfull \hbox (8.94693pt too wide) in paragraph at lines 82--83
-\OT1/cmr/m/n/10 Now, the Ja-co-bian is cal-cu-lated for the con-stants part $\O
-ML/cmm/m/it/10 L[]$\OT1/cmr/m/n/10 , where $\OML/cmm/m/it/10 L[] \OT1/cmr/m/n/1
-0 = [\OML/cmm/m/it/10 l[]; l[]; []  ; l[]\OT1/cmr/m/n/10 ]$
  []
 
 
@@ -538,12 +533,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
-
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
-[8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
@@ -553,50 +548,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--148
 
  []
 
-<images/T2/J.jpg, id=173, 3854.4pt x 1986.42125pt>
+<images/T2/J.jpg, id=170, 3854.4pt x 1986.42125pt>
 File: images/T2/J.jpg Graphic file (type jpg)
 <use images/T2/J.jpg>
 Package pdftex.def Info: images/T2/J.jpg  used on input line 160.
-(pdftex.def)             Requested size: 345.0pt x 177.80026pt.
+(pdftex.def)             Requested size: 469.75502pt x 242.08842pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[9]
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
-<images/T2/coodinates2D.jpg, id=197, 843.15pt x 632.3625pt>
+<images/T2/coodinates2D.jpg, id=194, 843.15pt x 632.3625pt>
 File: images/T2/coodinates2D.jpg Graphic file (type jpg)
 <use images/T2/coodinates2D.jpg>
 Package pdftex.def Info: images/T2/coodinates2D.jpg  used on input line 178.
-(pdftex.def)             Requested size: 345.0pt x 258.74925pt.
+(pdftex.def)             Requested size: 311.96062pt x 233.97046pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/T2/coordinates3D.jpg, id=199, 1264.725pt x 1193.45876pt>
+<images/T2/coordinates3D.jpg, id=196, 1264.725pt x 1193.45876pt>
 File: images/T2/coordinates3D.jpg Graphic file (type jpg)
 <use images/T2/coordinates3D.jpg>
 Package pdftex.def Info: images/T2/coordinates3D.jpg  used on input line 186.
-(pdftex.def)             Requested size: 345.0pt x 325.55252pt.
+(pdftex.def)             Requested size: 316.18048pt x 298.36395pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/T2/steps.jpg, id=201, 542.025pt x 815.045pt>
+<images/T2/steps.jpg, id=198, 542.025pt x 815.045pt>
 File: images/T2/steps.jpg Graphic file (type jpg)
 <use images/T2/steps.jpg>
 Package pdftex.def Info: images/T2/steps.jpg  used on input line 194.
-(pdftex.def)             Requested size: 345.0pt x 518.79147pt.
+(pdftex.def)             Requested size: 373.99765pt x 562.38165pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (third_part.tex [10 <./images/T2/J.jpg>]
-Overfull \hbox (61.46785pt too wide) detected at line 30
-\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 ] = [][] [][\OML/cmm/m/it/
-10 a[]\OT1/cmr/m/n/10 ] = [][] [][\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 ] = [][]
- []
+) [9 <./images/T2/J.jpg>]
 
-[11 <./images/T2/coodinates2D.jpg>]
+LaTeX Warning: Text page 10 contains only floats.
+
+[10 <./images/T2/coodinates2D.jpg> <./images/T2/coordinates3D.jpg>]
+
+LaTeX Warning: Text page 11 contains only floats.
+
+[11 <./images/T2/steps.jpg>] (third_part.tex
 Underfull \hbox (badness 10000) in paragraph at lines 53--55
 
  []
@@ -610,17 +607,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--57
 File: images/T3/slide.jpg Graphic file (type jpg)
 <use images/T3/slide.jpg>
 Package pdftex.def Info: images/T3/slide.jpg  used on input line 60.
-(pdftex.def)             Requested size: 241.49895pt x 186.94846pt.
-[12 <./images/T2/coordinates3D.jpg>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+(pdftex.def)             Requested size: 258.36668pt x 200.01773pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-[13]
+[12 <./images/T3/slide.jpg>] [13]
 Underfull \hbox (badness 10000) in paragraph at lines 112--116
 
  []
@@ -630,38 +623,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
 
-<images/T3/drink.jpg, id=257, 843.15pt x 632.3625pt>
+<images/T3/drink.jpg, id=266, 843.15pt x 632.3625pt>
 File: images/T3/drink.jpg Graphic file (type jpg)
 <use images/T3/drink.jpg>
 Package pdftex.def Info: images/T3/drink.jpg  used on input line 128.
-(pdftex.def)             Requested size: 241.49895pt x 181.12254pt.
+(pdftex.def)             Requested size: 328.82707pt x 246.62038pt.
 
-Overfull \hbox (5.75467pt too wide) in paragraph at lines 125--132
-\OT1/cmr/m/n/10 the re-con-structed 3D points in a fixed frame $\OML/cmm/m/it/1
-0 i$ \OT1/cmr/m/n/10 ($\OMS/cmsy/m/n/10 k\OML/cmm/m/it/10 X[] \OMS/cmsy/m/n/10 
-^^@ \OML/cmm/m/it/10 X[]\OMS/cmsy/m/n/10 k$\OT1/cmr/m/n/10 ). 
+Underfull \hbox (badness 1496) in paragraph at lines 129--129
+[]\OT1/cmr/m/n/10 Figure 12: []Comparison be-tween real 3D points (green) and 3
+D points re-con-structed (blue) for
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/T3/3DerrorDrink.jpg, id=259, 176.15813pt x 41.15375pt>
+<images/T3/3DerrorDrink.jpg, id=268, 176.15813pt x 41.15375pt>
 File: images/T3/3DerrorDrink.jpg Graphic file (type jpg)
 <use images/T3/3DerrorDrink.jpg>
 Package pdftex.def Info: images/T3/3DerrorDrink.jpg  used on input line 136.
-(pdftex.def)             Requested size: 241.49895pt x 56.41858pt.
-
-Underfull \hbox (badness 3407) in paragraph at lines 137--137
-[]\OT1/cmr/m/n/10 Figure 13: []Error be-tween real points and re-con-struc-tion
- points for
- []
-
+(pdftex.def)             Requested size: 187.89914pt x 43.89655pt.
 )
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14] [15 <./images/T2/steps.jpg>] [16 <./images/T3/slide.jpg> <./images/T3/drin
-k.jpg> <./images/T3/3DerrorDrink.jpg>] (Lab5AV.aux)
+[14 <./images/T3/drink.jpg>] [15 <./images/T3/3DerrorDrink.jpg>] (Lab5AV.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -670,37 +652,39 @@ Package rerunfilecheck Info: File `Lab5AV.out' has not changed.
 (rerunfilecheck)             Checksum: F9D7B81F4CB38082B288E5DD5E631349;2299.
  ) 
 Here is how much of TeX's memory you used:
- 11979 strings out of 474486
- 184863 string characters out of 5743755
- 2037542 words of memory out of 5000000
- 33986 multiletter control sequences out of 15000+600000
- 565478 words of font info for 62 fonts, out of 8000000 for 9000
+ 12012 strings out of 474486
+ 185620 string characters out of 5743755
+ 2071542 words of memory out of 5000000
+ 34015 multiletter control sequences out of 15000+600000
+ 565815 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,16n,79p,674b,2099s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,16n,79p,674b,1530s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Jesus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt
 1000.pk> <C:\Users\Jesus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\tcrm1000.pk><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmbx10.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Jesus/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Jesus/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Jesus/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Jes
-us/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/U
-sers/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.p
-fb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr12.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmr17.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr5.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmr7.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Jesus/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jesus/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Jesus/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Jesu
-s/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Lab5AV.pdf (16 pages, 1739991 bytes).
+0\tcrm1000.pk> <C:\Users\Jesus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\tcrm0900.pk><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Jesus/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Jesus/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Jesus/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Jesus
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Use
+rs/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr10.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmr17.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr5.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Jesus/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Jesus/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jesus/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Jesus/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/User
+s/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+>
+Output written on Lab5AV.pdf (15 pages, 1744838 bytes).
 PDF statistics:
- 391 PDF objects out of 1000 (max. 8388607)
- 138 named destinations out of 1000 (max. 500000)
+ 392 PDF objects out of 1000 (max. 8388607)
+ 137 named destinations out of 1000 (max. 500000)
  154 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -57,7 +57,7 @@
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\textwidth]{T3/slide}
+	\includegraphics[width=0.55\textwidth]{T3/slide}
 	\caption{Factoring slide}
 	\label{fig:slideT3}
 \end{figure}
@@ -109,7 +109,7 @@ options = optimset('Diagnostics','off','MaxFunEval',100000,'MaxIter',2000,'TolFu
 Q = reshape(q,3*k,3);
 \end{lstlisting}
 
-\noindent We can see inside the function $metricUpgrade(LambdaHat,q0)$ on line 13 of Listing \ref{lst:updatefunct}, where we compute the minimum $Q$ satisfying the orthogonality condition.\\ 
+\noindent We can see inside the function $metricUpgrade(LambdaHat,q0)$ on line 13 of Listing \ref{lst:updatefunct}, where we compute the $Q$ such that $Q$ minimizes the function $evalQ$ that computes the orthogonality condition.\\ 
 \noindent In line 10 in Listing \ref{lst:factorization}, we compute the trajectory bases.\\
 \noindent In line 12 in Listing \ref{lst:factorization}, we calculate $D$ from $RC$, solving the equation $\Vert W-RCD\Vert =0$.\\
 \noindent In line 13 in Listing \ref{lst:factorization}, finally we calculate the shape matrix $X=CD$.\\
@@ -133,7 +133,7 @@ Q = reshape(q,3*k,3);
 \noindent In the Figure \ref{fig:drink_error}, the first error of $0.0034452$ represents the difference between the truth rotation matrix and the reconstructed rotation matrix. The second error of $0.0052503$ represents the difference between the truth shape matrix and the reconstructed shape matrix. 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\textwidth]{T3/3DerrorDrink}
+	\includegraphics[width=0.4\textwidth]{T3/3DerrorDrink}
 	\caption{Error between real points and reconstruction points for \textbf{drink\_mocap.mat}. The first error is for the shape matrix, and the second is for the rotation matrix.}
 	\label{fig:drink_error}
 \end{figure}

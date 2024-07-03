@@ -161,37 +161,37 @@ if (priors.coeff_prior == 1)
     \caption{Jacobian result}
     \label{fig:J}
 \end{figure}
-
+\newpage
 \subsection{Examples:}
 \noindent Here we will show how to reconstruct the human face with the given frames and using the following input parameters:
 
 \begin{itemize}
 \item low-rank $K$(it is the number of bases): $2$
-\item $camera_prior$(it mean that the $R$ prior is active): $1$
-\item $coeff_prior$(it mean that the $L$ prior is active): $1$
+\item camera\_prior (it means that the $R$ prior is active): $1$
+\item coeff\_prior (it means that the $L$ prior is active): $1$
 \item number of optimizer iterations: $50$
 \end{itemize}
 \noindent In Figure \ref{fig:coodinates2D} we can see the comparison of the input points of a frame in green against the estimated points of that frame in blue color.\\
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=1.0\textwidth]{T2/coodinates2D}
+    \includegraphics[scale=0.37]{T2/coodinates2D}
     \caption{Input points compared to optimized points}
     \label{fig:coodinates2D}
 \end{figure}
 
 \noindent In Figure \ref{fig:coordinates3D} we can see the estimated 3D points for a frame.\\ 
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=1.0\textwidth]{T2/coordinates3D}
+    \includegraphics[scale=0.25]{T2/coordinates3D}
     \caption{3D reconstruction}
     \label{fig:coordinates3D}
 \end{figure}
 
 \noindent In Figure \ref{fig:steps} we see the calculation of each of the 50 optimizations, this method has a high cost in performance, but a good result is achieved as shown by the low error at the end.\\
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=1.0\textwidth]{T2/steps}
+    \includegraphics[scale=0.69]{T2/steps}
     \caption{Optimizer iterations}
     \label{fig:steps}
 \end{figure}
