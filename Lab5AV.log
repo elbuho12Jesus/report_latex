@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.7.2)  3 JUL 2024 15:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.7.2)  3 JUL 2024 16:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -384,50 +384,63 @@ File: images//T1/slide.jpg Graphic file (type jpg)
 Package pdftex.def Info: images//T1/slide.jpg  used on input line 7.
 (pdftex.def)             Requested size: 258.75pt x 182.58983pt.
  [2 <./images//T1/slide.jpg>]
-<images//T1/code.jpg, id=82, 512.41437pt x 515.42563pt>
-File: images//T1/code.jpg Graphic file (type jpg)
-<use images//T1/code.jpg>
-Package pdftex.def Info: images//T1/code.jpg  used on input line 47.
-(pdftex.def)             Requested size: 241.49895pt x 242.91858pt.
- [3 <./images//T1/code.jpg>]
-<images//T1/figure1.jpg, id=89, 843.15pt x 632.3625pt>
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+56.
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+) [3]
+<images//T1/figure1.jpg, id=115, 843.15pt x 632.3625pt>
 File: images//T1/figure1.jpg Graphic file (type jpg)
 <use images//T1/figure1.jpg>
-Package pdftex.def Info: images//T1/figure1.jpg  used on input line 62.
+Package pdftex.def Info: images//T1/figure1.jpg  used on input line 88.
 (pdftex.def)             Requested size: 207.0021pt x 155.24376pt.
-<images//T1/figure3.jpg, id=90, 843.15pt x 632.3625pt>
+<images//T1/figure3.jpg, id=116, 843.15pt x 632.3625pt>
 File: images//T1/figure3.jpg Graphic file (type jpg)
 <use images//T1/figure3.jpg>
-Package pdftex.def Info: images//T1/figure3.jpg  used on input line 69.
-(pdftex.def)             Requested size: 258.75pt x 194.06194pt.
-<images//T1/figure2.jpg, id=91, 843.15pt x 632.3625pt>
-File: images//T1/figure2.jpg Graphic file (type jpg)
-<use images//T1/figure2.jpg>
-Package pdftex.def Info: images//T1/figure2.jpg  used on input line 76.
+Package pdftex.def Info: images//T1/figure3.jpg  used on input line 95.
 (pdftex.def)             Requested size: 258.75pt x 194.06194pt.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images//T1/figure2.jpg, id=117, 843.15pt x 632.3625pt>
+File: images//T1/figure2.jpg Graphic file (type jpg)
+<use images//T1/figure2.jpg>
+Package pdftex.def Info: images//T1/figure2.jpg  used on input line 102.
+(pdftex.def)             Requested size: 258.75pt x 194.06194pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images//T1/3derror.jpg, id=94, 152.57pt x 42.1575pt>
+<images//T1/3derror.jpg, id=120, 152.57pt x 42.1575pt>
 File: images//T1/3derror.jpg Graphic file (type jpg)
 <use images//T1/3derror.jpg>
-Package pdftex.def Info: images//T1/3derror.jpg  used on input line 84.
+Package pdftex.def Info: images//T1/3derror.jpg  used on input line 110.
 (pdftex.def)             Requested size: 137.9979pt x 38.13243pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./second_part.tex [4 <./images//T1/figure1.jpg> <./images//T1/figure3.jpg>]
+) (./second_part.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--16
 
  []
 
-<images//T2/slide.jpg, id=106, 596.2275pt x 422.32782pt>
+[4 <./images//T1/figure1.jpg>] [5 <./images//T1/figure3.jpg> <./images//T1/figu
+re2.jpg>]
+<images//T2/slide.jpg, id=136, 596.2275pt x 422.32782pt>
 File: images//T2/slide.jpg Graphic file (type jpg)
 <use images//T2/slide.jpg>
 Package pdftex.def Info: images//T2/slide.jpg  used on input line 21.
 (pdftex.def)             Requested size: 241.49895pt x 171.06116pt.
-[5 <./images//T1/figure2.jpg> <./images//T1/3derror.jpg>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
@@ -454,7 +467,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--47
 
  []
 
-
+[6 <./images//T1/3derror.jpg> <./images//T2/slide.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
@@ -464,7 +477,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
  []
 
-[6 <./images//T2/slide.jpg>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
@@ -489,14 +502,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
 
-
+[7]
 Overfull \hbox (8.94693pt too wide) in paragraph at lines 83--84
 \OT1/cmr/m/n/10 Now, the Ja-co-bian is cal-cu-lated for the con-stants $\OML/cm
 m/m/it/10 L[]$ \OT1/cmr/m/n/10 part, where $\OML/cmm/m/it/10 L[] \OT1/cmr/m/n/1
 0 = [\OML/cmm/m/it/10 l[]; l[]; []  ; l[]\OT1/cmr/m/n/10 ]$
  []
 
-[7]
+
 Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
@@ -522,27 +535,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--126
  []
 
 [8]
-<images//T2/J.jpg, id=158, 3854.4pt x 1986.42125pt>
+<images//T2/J.jpg, id=178, 3854.4pt x 1986.42125pt>
 File: images//T2/J.jpg Graphic file (type jpg)
 <use images//T2/J.jpg>
 Package pdftex.def Info: images//T2/J.jpg  used on input line 158.
 (pdftex.def)             Requested size: 345.0pt x 177.80026pt.
- [9 <./images//T2/J.jpg>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 172--173
 
  []
 
-<images//T2/coodinates2D.jpg, id=177, 843.15pt x 632.3625pt>
+<images//T2/coodinates2D.jpg, id=180, 843.15pt x 632.3625pt>
 File: images//T2/coodinates2D.jpg Graphic file (type jpg)
 <use images//T2/coodinates2D.jpg>
 Package pdftex.def Info: images//T2/coodinates2D.jpg  used on input line 176.
 (pdftex.def)             Requested size: 345.0pt x 258.74925pt.
-<images//T2/coordinates3D.jpg, id=179, 1264.725pt x 1193.45876pt>
+[9]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images//T2/coordinates3D.jpg, id=203, 1264.725pt x 1193.45876pt>
 File: images//T2/coordinates3D.jpg Graphic file (type jpg)
 <use images//T2/coordinates3D.jpg>
 Package pdftex.def Info: images//T2/coordinates3D.jpg  used on input line 184.
 (pdftex.def)             Requested size: 345.0pt x 325.55252pt.
-<images//T2/steps.jpg, id=181, 542.025pt x 815.045pt>
+<images//T2/steps.jpg, id=205, 542.025pt x 815.045pt>
 File: images//T2/steps.jpg Graphic file (type jpg)
 <use images//T2/steps.jpg>
 Package pdftex.def Info: images//T2/steps.jpg  used on input line 191.
@@ -553,14 +574,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./third_part.tex [10 <./images//T2/coodinates2D.jpg>] [11 <./images//T2/coor
-dinates3D.jpg>]
+) (./third_part.tex
 Overfull \hbox (61.46785pt too wide) detected at line 30
 \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 ] = [][] [][\OML/cmm/m/it/
 10 a[]\OT1/cmr/m/n/10 ] = [][] [][\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 ] = [][]
  []
 
-
+[10 <./images//T2/J.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 53--55
 
  []
@@ -570,7 +590,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
-<images//T3/slide.jpg, id=195, 799.98875pt x 619.31375pt>
+<images//T3/slide.jpg, id=216, 799.98875pt x 619.31375pt>
 File: images//T3/slide.jpg Graphic file (type jpg)
 <use images//T3/slide.jpg>
 Package pdftex.def Info: images//T3/slide.jpg  used on input line 60.
@@ -583,11 +603,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-71.
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
-File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [12]
+[11 <./images//T2/coodinates2D.jpg>] [12 <./images//T2/coordinates3D.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 109--113
 
  []
@@ -597,25 +613,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
-
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
-[13]
-<images//T3/drink.jpg, id=240, 843.15pt x 632.3625pt>
+<images//T3/drink.jpg, id=263, 843.15pt x 632.3625pt>
 File: images//T3/drink.jpg Graphic file (type jpg)
 <use images//T3/drink.jpg>
 Package pdftex.def Info: images//T3/drink.jpg  used on input line 126.
 (pdftex.def)             Requested size: 241.49895pt x 181.12254pt.
-<images//T3/3DerrorDrink.jpg, id=242, 176.15813pt x 41.15375pt>
+<images//T3/3DerrorDrink.jpg, id=265, 176.15813pt x 41.15375pt>
 File: images//T3/3DerrorDrink.jpg Graphic file (type jpg)
 <use images//T3/3DerrorDrink.jpg>
 Package pdftex.def Info: images//T3/3DerrorDrink.jpg  used on input line 133.
 (pdftex.def)             Requested size: 241.49895pt x 56.41858pt.
 
 Underfull \hbox (badness 3872) in paragraph at lines 134--134
-[]\OT1/cmr/m/n/10 Figure 14: []error be-tween real points and re-con-struc-tion
+[]\OT1/cmr/m/n/10 Figure 13: []error be-tween real points and re-con-struc-tion
  points for
  []
 
@@ -628,17 +643,20 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [14] [15 <./images//T2/steps.jpg>] [16 <./images//T3/slide.jpg> <./images//T3/d
 rink.jpg> <./images//T3/3DerrorDrink.jpg>] (./Lab5AV.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `Lab5AV.out' has not changed.
 (rerunfilecheck)             Checksum: 02F9E5E67CF9BF500B77CDF5D810CAD5;2304.
  ) 
 Here is how much of TeX's memory you used:
- 11657 strings out of 480129
- 178452 string characters out of 5893410
- 558912 words of memory out of 5000000
- 29339 multiletter control sequences out of 15000+600000
+ 11686 strings out of 480129
+ 178716 string characters out of 5893410
+ 578913 words of memory out of 5000000
+ 29346 multiletter control sequences out of 15000+600000
  476049 words of font info for 52 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 60i,16n,63p,672b,1966s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,16n,63p,672b,1970s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/iclinux/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt1000.6
 00pk> </home/iclinux/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm100
 0.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pf
@@ -654,12 +672,13 @@ msfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Lab5AV.pdf (16 pages, 1824273 bytes).
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Lab5AV.pdf (16 pages, 1700083 bytes).
 PDF statistics:
- 360 PDF objects out of 1000 (max. 8388607)
- 291 compressed objects within 3 object streams
- 115 named destinations out of 1000 (max. 500000)
- 159 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 391 PDF objects out of 1000 (max. 8388607)
+ 320 compressed objects within 4 object streams
+ 138 named destinations out of 1000 (max. 500000)
+ 154 words of extra memory for PDF output out of 10000 (max. 10000000)
 

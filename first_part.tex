@@ -10,7 +10,8 @@
 \end{figure}
 
 \subsection{Code:}
-\noindent Now, we introduce the code. We will explain each line number, defining $Zc$  as the difference between the input matrix and the average of all the points in each frame, and not as the input matrix.
+\noindent Now, we introduce the code \ref{lstlisting-codeT1}. We will explain each line number:\\ 
+\noindent For the line $1$ and $2$, $Zc$ is defined as the difference between the input matrix and the average of all the points in each frame, and not as the input matrix.
 This way, we no longer have to consider translation in the computations.\\ 
 \noindent Therefore, the average matrix would be the following, with dimensions $2f\times p$
 \begin{equation}\label{eq:mean}
@@ -35,19 +36,44 @@ Media_{k}=
 \begin{equation}
 Zc=Input-Mean
 \end{equation}
-\noindent Having said this, we continue with the application of the code figure \ref{fig:codeT1}.\\
-%Poner line especifica
-\noindent In the first line, we calculate the factorization called Singular Value Decomposition (SVD).\\
-\noindent In the second line, we approximate $R=U(:,1:3)D(1:3, 1:3)^{1/2}$ and $S=D(1:3, 1:3)^{1/2}V(:, 1:3)'$ (where $R$ represents rotation and $S$ represents shape) in such a way that we only take the first three columns of U and, the first three columns of V and, the first three rows and the first three columns of D. This is because, being a rigid body, the rank of $R$ and $S$ is 3.\\
-\noindent In the ``while loop" we try to reduce $\Vert Zc-RU\Vert$  to the threshold, which in the code is called epsilon. The idea to optimize the rotation matrix is use the rotation condition $R_{i}R_{i}'=I$, where $I$ corresponds to the identity matrix. This rotation condition is used to calculate T in the code and thus be able to calculate the new matrices $S$ and $R$.
 
-%pusiste el codigo como imagen?%
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{T1/code}
-    \caption{source code}
-    \label{fig:codeT1}
-\end{figure}
+\noindent In the line "$3$, we calculate the factorization called Singular Value Decomposition (SVD).\\
+\noindent In the line $4$ and $5$, we approximate $R=U(:,1:3)D(1:3, 1:3)^{1/2}$ and $S=D(1:3, 1:3)^{1/2}V(:, 1:3)'$ (where $R$ represents rotation and $S$ represents shape). Knowing that the rank of $RS$ is 3, therefore the truth mathix $D$ should have a dimension of $3\times 3$, then we do the following:\\
+\begin{itemize}
+\item $D$: We take the first 3 rows and the first 3 columns.
+\item $U$: We take only the first 3 columns.
+\item $V$: We take only the first 3 columns.
+\end{itemize}
+\noindent therefore in that way we can calculate $S$ as $U_{2I\times 3}\sqrt{D}_{3\times 3}$ and R as $\sqrt{D}_{3\times 3}V^{'}_{3\times 3I}$\\
+
+\noindent In the ``while loop" of the line $10$, we try to reduce $\Vert Zc-RU\Vert$  to the threshold, which in the code is called epsilon. The idea to optimize the rotation matrix is use the rotation condition $R_{i}R_{i}'=I$, where $I$ corresponds to the identity matrix. This rotation condition is used to calculate $T$ in the code and thus be able to calculate the new matrices $S$ and $R$.
+
+\begin{lstlisting}[style=Matlab-editor, numbers=left]
+T = mean(Zc,2);
+Zc = Zc - repmat(T,1,size(Zc,2)); 
+[U, D, V] = svd(Zc);
+R = U(:, 1:3)*(D(1:3, 1:3) ^ 1/2); 
+S = (D(1:3, 1:3) ^ 1/2)*V(:, 1:3)';
+% Metric Upgrade Step
+F=size(Zc,1);
+k=0;
+thenorm=epsilon+1;
+while thenorm>epsilon && k<n_iter
+    Rp=R;
+    M=[];
+    for f=1:2:F
+       Rf=R(f:f+1,:);
+       [U2,useless,V2]=svd(Rf,'econ');       
+       T=U2*V2';
+       M=[M;T(1:2,:)];
+   end 
+    S=pinv(M)*Zc;
+    R=Zc*pinv(S);
+    k=k+1;
+    thenorm=norm(R-Rp,'fro')/numel(M);
+end
+\end{lstlisting}\label{lstlisting-codeT1}
+\noindent Finally, ones that the optimization finish, we obtain a shape matrix $S$ to compare as the truth matix shape $X$.
 
 \subsection{Examples:}
 \noindent Here we will show how to reconstruct the face of an Ogre with the given frames and using the following input parameters:
